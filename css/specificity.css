@@ -1,0 +1,38 @@
+/* Specificity */
+/* A rating that the browser gives each style rule which is a way to quantify the importance of a rule */
+/* The higher the the specificity number, the more important the rule is */
+/* Specificity consists of 3 parts: */
+/* A */
+/* Count of ID selectors in a rule */
+/* B */
+/* Count of class and attribute selectors in a rule */
+/* C */
+/* Count of type selectors in a rule  */
+
+/*
+*           a=0 b=0 c=0 -> specificity = 0
+LI          a=0 b=0 c=1 -> specificity = 1
+UL LI       a=0 b=0 c=2 -> specificity = 2
+LI.red      a=0 b=1 c=1 -> specificity = 11
+#content    a=1 b=0 c=0 -> specificity = 100
+*/
+
+/* specificity = 2 */ /* Highest specificity = Most important rule = black background */
+body > div
+{
+    background-color: black;
+}
+
+/* specificity = 1 */
+div
+{
+    background-color: yellow;
+}
+
+/* specificity = 0 */
+*
+{
+    background-color: red;
+}
+
+
