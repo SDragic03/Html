@@ -1,0 +1,45 @@
+/* A selector is a pattern used to apply styles to elements */
+
+/* Class - allows you to identify elements with the matching class attribute, (class=mainTitle) */
+/* class selector */
+.mainTitle {
+    font-style: italic;
+}
+
+/* Id - this selector will find an element with the given ID */
+/* id selector */
+#menu {
+    background-color: aliceblue;
+}
+
+/* Pseudo-class - classes that are not explicitly set on an element, but are inherent based on some characteristic of the element */
+/* pseudo-class selector */
+a:hover {
+    background-color: wheat;
+}
+
+/* Sibling - this selector allows you to separate two selectors and match the second element only if immediately following the first element */
+/* sibling selector */
+li:first-of-type + li {
+    color: red;
+}
+
+/* Descendant - Allows you to identify elements inside of elements */
+/* descendant selector */
+div p {
+    background-color: #b3d4fc;
+}
+/*Child - Allows you to identify elements directly beneath an element */
+/* child selector */
+div > p {
+    background-color: beige;
+}
+
+/* Attribute - allows you to select an element based on presence or value of a given attribute */
+/* attribute selector */
+a[href*="net"] { /* Links with "net" anywhere in the URL */
+    color: green;
+}
+
+
+

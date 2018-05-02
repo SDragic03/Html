@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>roles Example</title>
+</head>
+<body>
+<form action role="form">
+    <fieldset>
+        <legend>Create an Account</legend>
+        <div class="field">
+            <label for="username">Choose a Username</label>
+            <input role="textbox" aria-labelledby="username-help" type="text"
+                   id="username" required>
+            <div role="tooltip" id="username-help">Must choose a username</divr>
+            </div>
+            <div class="field">
+                <label for="email">Enter Your Email Address</label>
+                <input role="textbox" aria-labelledby="email-help" type="text"
+                       id="email" required>
+                <div role="tooltip" id="email-help">Must enter your email address</divr>
+                </div>
+                <div class="field">
+                    <label for="password">Create a Password</label>
+                    <input role="textbox" aria-labelledby="password-help" type="password"
+                           id="password" required>
+                    <div role="tooltip" id="password-help"> Must be at least 8 characters long</div>
+                </div>
+                <button role="button" aria-label="Submit">Create Account</button>
+    </fieldset>
+</form>
+</body>
+</html>

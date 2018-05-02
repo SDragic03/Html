@@ -1,0 +1,24 @@
+<!--aria-busy is an aria state attribute that should be used on auto updating content-->
+<!--aria-busy state is used with aria-live.-->
+<!--aria-busy has two possible values:-->
+<!--aria-busy=”true” and aria-busy=”false”.-->
+<!--ARIA-busy=”true” is set when a relevant portion of the page is currently getting updated and the users are waiting to read the updated content.-->
+<!--Users of assistive technology will not be able to read anything while the content is getting updated.-->
+<!--Screen readers can indicate "busy" to the user-->
+<!--Once the content is updated content authors can set aria-busy=”false” or remove the ARIA-busy attribute-->
+<!--Once the content is updated the assistive technologies gather the updated information and provide it to the user.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>https://www.w3.org/TR/wai-aria-1.1/#aria-busy</title>
+</head>
+<body>
+<h2>Current Score</h2>
+<p aria-live=”polite” aria-busy=”true”></p>
+<p ARIA-live=”polite” aria-busy=”false”>the current score is 50 to 60</p>
+</body>
+</html>
+
+

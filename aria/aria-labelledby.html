@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>aria-labelledby Example</title>
+</head>
+<body>
+<div id="info">Information</div>
+
+<div>
+    <div id="name">Name</div>
+    <input type="text" aria-labelledby="info name"/>
+</div>
+<div>
+    <div id="Age">Age</div>
+    <input type="text" aria-labelledby="info age"/>
+</div>
+
+<div role="main" aria-labelledby="content">
+    <h1 id="content">Pellentesque habitant morbi tristiques</h1>
+    Morbi in sem quis dui placerat ornare.
+</div>
+
+
+</body>
+</html>

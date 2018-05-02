@@ -1,0 +1,124 @@
+ARIA - Web Accessibility Initiative - Accessible Rich Internet Applications
+A specification created to help bring accessibility and semantic value to more modern web
+applications that rely on AJAX, HTML, and JavaScript
+
+Without ARIA assistive technologies cannot recognize complex controls, gloss over elements
+as content and not functionality, providing no additional feedback to the user, rendering
+them completely inaccessible
+
+With ARIA items become widgets that can be interpreted by assistive technologies allowing
+the user to interact with them.
+
+It is best practice to use the Default HTML elements if possible.
+Don't create your own custom control if it will have the same functionality of a native
+HTML element.
+
+ARIA attributes are designed to be used by the operating systems accessibility API so
+that assistive technologies will interpret the widgets in the same way they would a
+native app control
+
+ARIA specification splits things up into two different categories:
+
+Roles: What a widget is or what it does
+    They are used for things like menus, sliders, progress meters, Modals, etc
+    They are used to describe structure, like headings, regions, tables
+
+    Landmark roles: special type of ARIA role that help assistive technologies navigate
+    our content. They are used to describe common regions within documents. To add them to
+    markup we add a role attribute to the container element with the proper name.
+
+        role="application"
+            Used if the region is considered a web application and not a web document.
+            This will let any assistive technology know that it should switch into application
+            browsing mode which make navigation much quicker since the user will now navigate
+            from widget to widget instead of links and form controls.
+
+        role="banner"
+            Normally the header of the site or application, contains name of the site
+            and the title of the page
+
+        role="navigation"
+            Contains navigation for the site or application
+
+        role="main"
+            Should be added to the container that contains the main content for the document
+
+        role="search"
+            Should be added to the search form for the site or application
+
+        role="complimentary"
+            Used to contain content that's complimentary to the main content for the document
+            usually found on items like side bars.
+
+        role="form"
+            Should be added to anything that contains a collection of elements that make up a form.
+
+        role="contentinfo"
+            Normally used for things like the site footer, providing information about the parent
+            document, like footnotes, copyrights, and privacy statements.
+
+    Widgets roles: roles that are used to describe interactive elements that currently have no HTML counterpart
+        Examples: alert, button, checkbox, gridcell, link, log, menuitem, progressbar, scrollbar, etc
+
+    Container roles: subset of widget roles that can be used as containers for other contained widgets
+        Examples: combobox, grid, listbox, menu, menubar, radiogroup, tablist, tree, treegrid, etc
+
+    Document Structure roles: roles used for to describle non-interactive elements that provide the
+    structure of content within your site or applications.
+        Examples: article, columnheader, directory, heading, img, list, listitem, row, toolbar, etc
+
+States & Properties: aka ARIA attributes
+
+    States: The current interaction state of a widget:
+        These attributes describe dynamic states of custom components
+        state attributes are normally updated with JavaScript when they need to change
+        state attributes are perfixed with aria-
+
+            Examples:
+            aria-busy: is an aria state attribute that should be used on auto updating content
+            aria-disabled: is an aria state attribute that indicates that a form field is disabled
+            aria-expanded: is an aria state attribute used to indicate the state of a collapsible element
+            aria-haspopup: is an aria state attribute used to indicate that the element has a popup context menu or sub-level menu.
+            aria-hidden: is an aria state attribute used to indicate that the element and all of its descendants are not visible or perceivable to any user
+
+    Properties: Characteristics of the widgets:
+        They are used to describe relationships between elements and rarely change
+        Property attributes are perfixed with aria-
+
+        Examples:
+        aria-label: is an aria property attribute that is used to define a string that labels the current element.
+        aria-labelledby: is an aria property that provides the user with a recognizable name of the object.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>aria-label Example</title>
+</head>
+<body>
+<form action role="form">
+    <fieldset>
+        <legend>Create an Account</legend>
+        <div class="field">
+            <label for="username">Choose a Username</label>
+            <input role="textbox" aria-labelledby="username-help" type="text"
+                   id="username" required>
+            <div role="tooltip" id="username-help">Must choose a username</divr>
+            </div>
+            <div class="field">
+                <label for="email">Enter Your Email Address</label>
+                <input aria-labelledby="email-help" type="text"
+                       id="email" required>
+                <div role="tooltip" id="email-help">Must enter your email address</divr>
+                </div>
+                <div class="field">
+                    <label for="password">Create a Password</label>
+                    <input aria-labelledby="password-help" type="password"
+                           id="password" required>
+                    <div role="tooltip" id="password-help"> Must be at least 8 characters long</div>
+                </div>
+                <button role="button" aria-label="Submit">Create Account</button>
+    </fieldset>
+</form>
+</body>
+</html>

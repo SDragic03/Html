@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>aria-haspopup Example</title>
+</head>
+<body>
+<div role="menubar">
+    <div role="menuitem" aria-haspopup="true" id="fileMenu">File</div>
+    <div role="menu" aria-labelledby="fileMenu">
+        <div role="menuitem">Open</div>
+        <div role="menuitem">Save</div>
+        <div role="menuitem">Save as</div>
+    </div>
+</div>
+
+<nav role="navigation">
+    <h2>Main Navigation</h2>
+    <ul role="menu" class="menu">
+        <li role="menuitem">
+            <a href="#" aria-haspopup="true">Home</a>
+
+        </li>
+
+    </ul>
+    <ul role="menu" class="menu">
+        <li role="menuitem">
+            <a href="#" aria-haspopup="true">Our Products</a>
+            <ul role="menu" aria-hidden="true" class="submenu"></ul>
+            <a href="#" aria-haspopup="true">Product One</a>
+            <a href="#" aria-haspopup="true">Product Two</a>
+            <a href="#" aria-haspopup="true">Product Three</a>
+
+        </li>
+
+    </ul>
+    <ul role="menu" class="menu">
+        <li role="menuitem">
+            <a href="#" aria-haspopup="true">About</a>
+
+        </li>
+
+    </ul>
+    <ul role="menu" class="menu">
+        <li role="menuitem">
+            <a href="#" aria-haspopup="true">Contact</a>
+
+        </li>
+
+    </ul>
+
+</nav>
+</body>
+</html>
