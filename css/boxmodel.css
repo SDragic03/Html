@@ -1,0 +1,58 @@
+/* The Box Model */
+/* Every element renders a box */
+/* A box has 4 sides */
+/* You can have boxes within boxes */
+/* You can control margin, padding, border, and width of the box*/
+/* You can set the border, margin, and padding settings differently for each of the four sides of a box */
+/* or you can set them all to the same values */
+
+/* Border */
+/* A box property that outlines a "border" around a box */
+/* You can control the width, style, and color of borders*/
+
+/* Padding */
+/* A box property that adds space between the border of a box and the content of a box */
+/* Pushes content inward */
+
+/* Margin */
+/* Margins are the space between a box and any adjacent elements */
+/* Margins push boxes away from other boxes */
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+body
+{
+    background-color: #cccccc;
+}
+
+.menu
+{
+    list-style: none;
+    text-align: center;
+}
+
+.menu li
+{
+   background-color: honeydew;
+    padding: 3px 0 0 10px;
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    border-bottom: 3px solid black;
+    border-left: 3px solid red;
+}
+
+.menu li a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.menu li:hover
+{
+    background-color: indianred;
+}
