@@ -1,0 +1,96 @@
+/* Position property  */
+/* The default position value is static */
+/* Static positioning stacks up elements one after the other down the page */
+/* Relative positioning moves an element from its default position in some direction, */
+/* we can set the values for top, left, right and bottom properties to move a relative positioned element, */
+/* a number of pixels */
+/* Absolute positioning moves an element to a specific position relative to the body of the document  */
+/* Fixed positioning moves an element to a specific position relative to the window itself */
+
+/* Float property */
+/* A floating element can shift to the left or right of a line,  */
+/* Allowing content to flow along beside it if there's enough room */
+
+/* Clear property */
+/* Specifies whether an element can be next to floating elements, */
+/* that precede it or must be moved down (cleared) below them. */
+
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+.header
+{
+    height: 100px;
+    position: relative;
+}
+
+#navi
+{
+    position: absolute;
+    top: 95px;
+    left: 5px;
+    width: 900px;
+}
+
+.menu
+{
+    list-style: none;
+    text-align: left;
+}
+
+.menu li
+{
+    padding: 3px 0 0 10px;
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    border-bottom: 3px solid black;
+    border-left: 3px solid red;
+}
+
+.menu li a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.menu li:hover
+{
+    background-color: lightgoldenrodyellow;
+}
+
+#buttons
+{
+    margin: 0 0 0 10px;
+    width: 250px;
+}
+
+#content
+{
+    margin: 50px 5px 0 5px;
+}
+
+#mainContent
+{
+    font-size: 1.2em;
+}
+
+#mainContent p
+{
+    margin: 15px 0 0 0;
+}
+
+
+#figure1
+{
+    float: left;
+    width: 350px;
+}
+
+.clear
+{
+   clear: right;
+}
