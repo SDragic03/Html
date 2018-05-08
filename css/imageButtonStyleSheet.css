@@ -1,0 +1,22 @@
+/* Image button */
+
+/* The <input type="image"> element is an element whose content isn't generated or directly managed by the CSS layer, */
+ /* <input type="image"> behaves in much of the same way as a regular <img> element, */
+ /* <input type="image"> has the capabilities of a submit button. */
+ /* The path to the image to be displayed is specified in the src attribute. */
+
+div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 50px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#image
+{
+    width: 60px;
+}
