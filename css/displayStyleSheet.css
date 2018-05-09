@@ -1,0 +1,100 @@
+/* Display property */
+/* Specifies the type of rendering box used for a element */
+/* Default display values are assigned by behaviors described in the html, */
+/* or from the browser/user stylesheet */
+
+/* keyword values are grouped into six categories */
+/* <display-outside> - specify's element's outer display type */
+    /* block - a block element box */
+    /* inline - one or more inline element boxes */
+    /* run-in - a run-in box, elements act like inlines or blocks, depends on the surrounding elements */
+
+/* <display-inside> - specify's element's inner display type */
+    /* flow - flow layout, block and inline */
+    /* flow -root - a block element box that establishes a new block formatting context */
+    /* table - block-level box  that behaves like <table> element */
+    /* flex - block element, lays out content according to the flexbox model */
+    /* grid - block element, lays out content according to the grid model */
+    /* subgrid - if parent element display value is grid, behaves like a grid model for the element and its content */
+    /* ruby - behaves like an inline element, lays out content according to the ruby formatting model */
+
+/* <display-listitem> */
+    /* Block box for the content, seperate list-item inline box */
+    /* if <display-inside> value = default, principal box's inner display type = flow */
+    /* if <display-outside> value = default, principal box's outer display type = block */
+
+/* <display-internal> - internal display values for layout models that have complex internal structures */
+    /* table-row-group - elements behave like <tbody> HTML elements */
+    /* table-header-group - table-header-group */
+    /* table-footer-group - elements behave like <tfoot> HTML elements. */
+    /* table-row- behave like <tr> HTML elements. */
+    /* table-cell - behave like <td> HTML elements. */
+    /* table-column-group - behave like <colgroup> HTML elements. */
+    /* table-column	- behave like <col> HTML elements. */
+    /* table-caption - behave like <caption> HTML elements. */
+    /* ruby-base - behave like <rb> elements.*/
+    /* ruby-text - behave like <rt> elements./
+    /* ruby-base-container - elements behave like <rbc> elements generated as anonymous boxes. */
+    /* ruby-text-container - behave like <rtc> elements.*/
+
+/* <display-box> */
+    /* contents */
+        /* Elements don't produce a specific box by themselves. */
+        /* They are replaced by their pseudo-box and their child boxes. */
+        /* Remove the element from the accessibility tree */
+    /* none */
+        /* turns off the display of an element */
+        /* renders as though the elements do not exist */
+
+/* <display-legacy> */
+    /* inline-block - block element box that will be flowed with surrounding content as if it were a single inline box. */
+    /* inline-table - behaves like a <table> HTML element, but as an inline box, rather than a block-level box. Inside the table box is a block-level context. */
+    /* inline-flex - behaves like an inline element and lays out its content according to the flexbox model. */
+    /* inline-grid - behaves like an inline element and lays out its content according to the grid model. */
+
+/* best practice is just to use the single display keyword */
+
+/* Examples */
+#secret {
+    display: none;
+}
+
+#inline {
+    background-color: yellow;
+    display: inline;
+}
+
+#block {
+    background-color: red;
+    display: block;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.flex-container {
+    display: flex;
+
+}
+
+.flex-container > div {
+    margin: 5px;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.contents {
+    display: contents;
+    border: 1px solid red;
+    background-color: lightgrey;
+    padding: 10px;
+    width: 200px;
+}
+
+.emph {
+    border: 3px solid red;
+    background-color: lightcoral;
+    padding: 10px;
+}
