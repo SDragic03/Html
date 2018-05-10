@@ -1,0 +1,51 @@
+/* Flexbox - Flexible Box Module */
+/* A CSS option that allows us to control layouts */
+/* gives a container the ability to alter its items width, height and order */
+/* to best fill the available space and accommodate to all kind of screen sizes and display devices */
+/* Flexbox layout is direction-agnostic */
+
+html, body {
+    height: 100%;
+    background: black;
+    padding-top: 40px;
+}
+
+ul#flex-container {
+    display: flex; /* defines a flex container */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; /* wrapping flex items onto multiple lines, top to bottom */
+    height: 300px;
+    align-items: baseline; /* items are aligned like their baselines align */
+}
+
+ul li {
+    flex-grow: 1; /* distributing space within the container equally to the list items */
+    width: 250px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.2em;
+    text-align: center;
+    margin: 0;
+    padding: 45px 0 0 0;
+    position: relative;
+}
+
+ul li img {
+    width: 100%;
+}
+
+ul li a span {
+    position: absolute;
+    color: antiquewhite;
+    bottom: 7px;
+    left: 15px;
+    font-size: 6em;
+    z-index: 3;
+    font-family: Avenir;
+}
+
+ul li:hover {
+    background: #222222;
+}
